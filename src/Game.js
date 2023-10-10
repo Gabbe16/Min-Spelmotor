@@ -8,7 +8,7 @@ export default class Game {
     this.keys = []
     this.enemies = []
     this.gameOver = false
-    this.gravity = 1
+    this.gravity = 5
     this.debug = false
 
     this.Player = new Player(this)
