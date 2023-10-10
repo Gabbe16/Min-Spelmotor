@@ -7,9 +7,9 @@ export default class Player {
         this.y = 350
 
         this.speedX = 1
-        this.speedY = 0
+        this.speedY = 1
         this.maxSpeed = 4
-        this.jumpHeight = -5
+        this.jumpHeight = -20
     }
 
     update(deltaTime) {
@@ -18,11 +18,14 @@ export default class Player {
         } else if (this.game.keys.includes('ArrowRight')) {
             this.speedX = this.maxSpeed
         } else if (this.game.keys.includes('ArrowUp')) {
-            // kod för att hoppa här
+            this.speedY = this.jumpHeight
         } else {
             this.speedX = 0
+            this.speedY = 0
+            this.y = 350
         }
         
+        this.y += this.speedY
         this.x += this.speedX
     }
 
