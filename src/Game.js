@@ -11,17 +11,17 @@ export default class Game {
     this.gravity = 5
     this.debug = false
 
-    this.Player = new Player(this)
+    this.player = new Player(this)
   }
 
   update(deltaTime) {
     if (!this.gameOver) {
       this.gameTime += deltaTime
     }
-    this.Player.update(deltaTime)
+    this.player.update(deltaTime)
   }
 
   draw(context) {
-    this.Player.draw(context)
+    this.player.draw(context)
   }
 }
