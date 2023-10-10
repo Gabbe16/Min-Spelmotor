@@ -1,8 +1,10 @@
 import Player from "./Player.js"
+import InputHandler from "./InputHandler.js"
 export default class Game {
   constructor(width, height) {
     this.width = width
     this.height = height
+    this.input = new InputHandler(this)
     this.keys = []
     this.enemies = []
     this.gameOver = false
