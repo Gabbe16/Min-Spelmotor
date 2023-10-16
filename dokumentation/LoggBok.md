@@ -9,3 +9,8 @@ Idag är både steg 4-5 klara med InputHandler och Projektiler
 Jag gjorde först en ny klass som hette InputHandler som i sig skulle hantera olika inputs och sedan flytta på kuben när jag trycker på tangenterna. Därefter gjorde jag projektiler som skjöts från kuben med knappen s ifrån inputhandler
 
 Jag har haft lite problem med att skicka parametrar till draw eftersom jag hade glömt att titta efter parametrar när jag felsökte. 
+
+## Vecka 42 Måndag (2023-10-16)
+
+
+Sist gjorde jag platform klassen och använde den i game. Det gick bra förutom att jag inte kunde testa den och se att den fungerade eftersom jag var på en lånedator. Idag ska jag testa och se att platforms fungerar som dem ska och därefter möjligtvis fixa så att kuben kan hoppa med gravitation. Jag behehöver lära mig mer om klasser och hur dem fungerar men också deras användning så att det inte blir en massa slarvfel. Just nu tror jag inte att jag behöver hjälp från Jens.
