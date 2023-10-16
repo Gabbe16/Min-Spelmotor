@@ -14,3 +14,6 @@ Jag har haft lite problem med att skicka parametrar till draw eftersom jag hade 
 
 
 Sist gjorde jag platform klassen och använde den i game. Det gick bra förutom att jag inte kunde testa den och se att den fungerade eftersom jag var på en lånedator. Idag ska jag testa och se att platforms fungerar som dem ska och därefter möjligtvis fixa så att kuben kan hoppa med gravitation. Jag behehöver lära mig mer om klasser och hur dem fungerar men också deras användning så att det inte blir en massa slarvfel. Just nu tror jag inte att jag behöver hjälp från Jens.
+## Vecka 41 Torsdag (2023-10-12)
+
+Idag påbörjade jag med att lägga till mario liknande platformar genom att göra en klass för Platform och sedan använda den i game genom att göra en array med en massa nya platforms med olika x och y koordinater, widths och heights. Därefter ritas alla ut med hjälp av en foreach-loop som går igenom arrayen med platforms och sedan ritar ut dem.
