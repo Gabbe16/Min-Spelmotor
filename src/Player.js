@@ -7,7 +7,7 @@ export default class Player {
         this.height = 64
         this.x = 50
         this.y = 350
-        
+
         this.speedX = 0
         this.speedY = 0
         this.maxSpeed = 4
