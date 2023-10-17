@@ -1,26 +1,29 @@
 import Player from "./Player.js"
 import InputHandler from "./InputHandler.js"
+import UserInterface from "./UserInterface.js"
 import Platform from "./Platform.js"
+
 export default class Game {
   constructor(width, height) {
     this.width = width
     this.height = height
     this.input = new InputHandler(this)
+    this.UI = new UserInterface(this)
     this.keys = []
+    this.enemies = []
+    this.gameOver = false
+    this.debug = false
+    this.gravity = 1
+    this.gameTime = 0
+    this.score = 0
+    this.ground = this.height - 100
+
+    this.player = new Player(this)
 
     this.platforms = [
       new Platform(this, this.width - 200, 280, 200, 20),
       new Platform(this, 200, 200, 300, 20)
     ]
-
-    this.enemies = []
-    this.gameOver = false
-    this.gravity = 5
-    this.debug = false
-
-    this.player = new Player(this)
-
-    this.ground = this.height - 100
   }
 
   update(deltaTime) {
@@ -35,7 +38,7 @@ export default class Game {
         this.player.y = this.platform.y - this.player.height
         this.player.grounded = true
       }
-    this.enemies.forEach(() => {
+      this.enemies.forEach(() => {
         if (this.checkPlatformCollision(enemy, platform)) {
           enemy.speedY = 0
           enemy.y = platform.y - enemy.height
@@ -67,6 +70,7 @@ export default class Game {
 
 
   draw(context) {
+    this.UI.draw(context)
     this.player.draw(context)
     this.platforms.forEach((platform) => platform.draw(context))
   }

@@ -10,8 +10,8 @@ export default class Player {
         
         this.speedX = 0
         this.speedY = 0
-        this.maxSpeed = 3
-        this.jumpSpeed = 14
+        this.maxSpeed = 4
+        this.jumpSpeed = 15
         this.grounded = false
 
         this.projectiles = []
@@ -26,22 +26,10 @@ export default class Player {
             this.speedX = 0
         }
 
-        if (this.game.keys.includes('ArrowUp') && this.grounded) {
-            this.speedY = -this.jumpSpeed
-            this.grounded = false
-        }
-        
-        if (this.grounded) {
-            this.speedY = 0
-        } else {
-            this.speedY = this.game.gravity
-        }
-        
-        this.y += this.speedY
         this.x += this.speedX
 
 
-
+        // Projectiles
         this.projectiles.forEach((projectile) => {
             projectile.update()
         })
