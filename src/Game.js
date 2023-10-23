@@ -21,9 +21,11 @@ export default class Game {
     this.enemyTimer = 0
     this.enemyIntervall = 1000
 
+    this.ground = this.height - 100
     this.player = new Player(this)
 
     this.platforms = [
+      new Platform(this, 0, this.ground, this.width, 100),
       new Platform(this, this.width - 200, 280, 200, 20),
       new Platform(this, 200, 200, 300, 20)
     ]
@@ -34,6 +36,20 @@ export default class Game {
       this.gameTime += deltaTime
     }
     this.player.update(deltaTime)
+
+    this.platforms.forEach((platform) => {
+      if (this.checkPlatformCollision(this.player, platform)) {
+        this.player.speedY = 0
+        this.player.y = platform.y - this.player.height
+        this.player.grounded = true
+      }
+      this.enemies.forEach((enemy) => {
+        if (this.checkPlatformCollision(enemy, platform)) {
+          enemy.speedY = 0
+          enemy.y = platform.y - enemy.height
+        }
+      })
+    })
 
     if (this.enemyTimer > this.enemyIntervall && !this.gameOver) {
       this.addEnemy()
@@ -53,7 +69,28 @@ export default class Game {
     this.enemies.forEach((enemy) => enemy.draw(context))
   }
 
+  checkPlatformCollision(object, platform) {
+      if (
+        object.y + object.height >= platform.y &&
+        object.y < platform.y &&
+        object.x + object.width >= platform.x &&
+        object.x <= platform.x + platform.width
+      ) {
+        if (object.grounded && object.y + object.height > platform.y) {
+          object.speedY = 0
+          object.y = platform.y - object.height
+          object.grounded = true
+        }
+        return true
+      } else {
+        if (object.grounded && object.y + object.height < platform.y) {
+          object.grounded = false
+        }
+        return false
+      }
+  }
+
   addEnemy() {
-    this.enemies.push(new Slime(this, 340, 168))
+    this.enemies.push(new Slime(this, 340, 370))
   }
 }

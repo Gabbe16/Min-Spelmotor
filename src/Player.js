@@ -26,6 +26,18 @@ export default class Player {
             this.speedX = 0
         }
 
+        if (this.game.keys.includes('ArrowUp') && this.grounded) {
+            this.speedY = -this.jumpSpeed
+            this.grounded = false
+          }
+      
+          if (this.grounded) {
+            this.speedY = 0
+          } else {
+            this.speedY += this.game.gravity
+          }
+
+        this.y += this.speedY
         this.x += this.speedX
 
 
