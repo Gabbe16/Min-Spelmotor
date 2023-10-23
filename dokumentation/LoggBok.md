@@ -27,3 +27,9 @@ Idag har jag gjort steg 6 och 7.
 Både UserInterface och enemies är klara och går att fortsätta ändra i. Jag har lagt till några egna saker i dessa som i ui har jag lagt till något som kan hålla koll på score och i enemies har jag gjort att man måste sätta x och y på grund av att det kommer att vara pumpor som är stilla. Jag måste däremot fortfarande ändra mer på vart enemies spawnar och hur ofta. Samtidigt behöver jag göra en ny function för collisions så att dem försvinner när man hoppar på pumporna.
 
 Det sista jag gjort idag var att ta bort den gamla koden för collisions med platformar och även gravitationen eftersom jag hade missat alldeles för mycket och hoppat fram för långt. Platform klassen är kvar och fortfarande utritade men har inga collisions. Nästa steg som är 8 och även mario delen handlar om collisions + hopp och då kommer jag att fixa detta så att det fungerar att både hoppa, landa på platforms och landa på pumpor så att dem försvinner.
+
+## Vecka 43 Måndag (2023-10-23)
+
+Idag har jag äntligen fixat så att man kan hoppa och att det finns gravitation.
+
+Problemet jag hade förut var att jag inte hade någon platform som agerade som en typ av mark som gjorde att jag var grounded. Nu har jag lagt till platform marken och lagt till kollisioner för att därefter nu kunna hoppa och sedan falla ned. Detta tog ett tag eftersom jag borde insett det tidigare men det gav mig tiden att fixa ui och enemies.
