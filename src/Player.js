@@ -39,29 +39,10 @@ export default class Player {
 
         this.y += this.speedY
         this.x += this.speedX
-
-
-        // Projectiles
-        this.projectiles.forEach((projectile) => {
-            projectile.update()
-        })
-        this.projectiles = this.projectiles.filter(
-            (projectile) => !projectile.markedForDeletion
-        )
     }
-
 
     draw(context) {
         context.fillStyle = '#f00'
         context.fillRect(this.x, this.y, this.width, this.height)
-        this.projectiles.forEach((projectile) => {
-            projectile.draw(context)
-        })
-    }
-
-    shoot() {
-        this.projectiles.push(
-            new Projectile(this.game, this.x + this.width, this.y + this.height / 2)
-        )
     }
 }
