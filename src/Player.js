@@ -1,5 +1,3 @@
-import Projectile from "./Projectile"
-
 export default class Player {
     constructor(game) {
         this.game = game
