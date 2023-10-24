@@ -8,8 +8,8 @@ export default class Player {
 
         this.speedX = 0
         this.speedY = 0
-        this.maxSpeed = 4
-        this.jumpSpeed = 15
+        this.maxSpeed = 3
+        this.jumpSpeed = 14
         this.grounded = false
 
         this.projectiles = []

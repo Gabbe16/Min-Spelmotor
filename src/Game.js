@@ -1,9 +1,10 @@
-import Slime from "./Slime.js"
+import Slime from "./Pumpkin.js"
 import InputHandler from "./InputHandler.js"
 import Platform from "./Platform.js"
 import Player from "./Player.js"
 import UserInterface from "./UserInterface.js"
 import Camera from "./Camera.js"
+import Pumpkin from "./Pumpkin.js"
 
 export default class Game {
   constructor(width, height) {
@@ -18,7 +19,12 @@ export default class Game {
     this.debug = false
     this.gameTime = 0
     
-    this.enemies = [new Slime(this, 340, 370)]
+    this.enemies = [
+      new Pumpkin(this, 350, 370),
+      new Pumpkin(this, 700, 370),
+      new Pumpkin(this, 1050, 370)
+
+    ]
     this.enemyTimer = 0
     this.enemyIntervall = 1000
     

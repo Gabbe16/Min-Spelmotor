@@ -1,6 +1,6 @@
 import Enemy from "./Enemy";
 
-export default class Slime extends Enemy {
+export default class Pumpkin extends Enemy {
     constructor(game, x, y) {
         super(game)
         this.width = 32
@@ -11,5 +11,5 @@ export default class Slime extends Enemy {
         this.lives = 1
     }
 
-    
+
 }
