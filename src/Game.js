@@ -23,8 +23,8 @@ export default class Game {
       new Pumpkin(this, 350, 370),
       new Pumpkin(this, 700, 370),
       new Pumpkin(this, 1050, 370)
-
     ]
+    
     this.enemyTimer = 0
     this.enemyIntervall = 1000
     
