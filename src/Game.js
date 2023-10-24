@@ -1,4 +1,3 @@
-import Slime from "./Pumpkin.js"
 import InputHandler from "./InputHandler.js"
 import Platform from "./Platform.js"
 import Player from "./Player.js"
