@@ -10,4 +10,6 @@ export default class Slime extends Enemy {
         this.speedX = 0
         this.lives = 1
     }
+
+    
 }
