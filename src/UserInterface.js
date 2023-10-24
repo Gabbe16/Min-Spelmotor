@@ -20,6 +20,7 @@ export default class UserInterface {
             10,
             35
         )
+
         context.fillText(
             `Score: ${this.game.score}`,
             10,

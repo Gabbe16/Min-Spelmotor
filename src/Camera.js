@@ -11,8 +11,8 @@ export default class Camera {
     }
 
     update(player) {
-        const halfWidth = this.width/2
-        const halfHeight = this.height/2
+        const halfWidth = this.width / 2
+        const halfHeight = this.height / 2
         const maxX = this.game.width
 
         let targetX = Math.min(Math.max(player.x - halfWidth, this.minX), maxX)

@@ -18,21 +18,21 @@ export default class Game {
     this.gravity = 1
     this.debug = false
     this.gameTime = 0
-    
+
     this.enemies = [
       new Pumpkin(this, 350, 370),
       new Pumpkin(this, 700, 370),
       new Pumpkin(this, 1050, 370)
     ]
-    
+
     this.enemyTimer = 0
     this.enemyIntervall = 1000
-    
+
     this.player = new Player(this)
     this.camera = new Camera(this, this.player.x, this.player.y, 0, 100)
-    
+
     this.ground = this.height - 100
-    
+
     this.platforms = [
       new Platform(this, 0, this.ground, this.width + 600, 200),
     ]

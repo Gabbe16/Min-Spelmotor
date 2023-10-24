@@ -10,6 +10,4 @@ export default class Pumpkin extends Enemy {
         this.speedX = 0
         this.lives = 1
     }
-
-
 }
