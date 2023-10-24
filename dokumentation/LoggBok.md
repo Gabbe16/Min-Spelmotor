@@ -33,3 +33,9 @@ Det sista jag gjort idag var att ta bort den gamla koden för collisions med pla
 Idag har jag äntligen fixat så att man kan hoppa och att det finns gravitation.
 
 Problemet jag hade förut var att jag inte hade någon platform som agerade som en typ av mark som gjorde att jag var grounded. Nu har jag lagt till platform marken och lagt till kollisioner för att därefter nu kunna hoppa och sedan falla ned. Detta tog ett tag eftersom jag borde insett det tidigare men det gav mig tiden att fixa ui och enemies.
+
+## Vecka 43 Tisdag (2023-10-24)
+
+Idag har jag fixat varierande saker som ui, enemies och en kamera som följer spelaren.
+
+I ui har jag fixat så att score ligger under tiden istället för att texten är bredvid varandra. På enemies har jag fixat så att dem inte buggar fast i marken och till sist har jag följt dokumentationen för mario-kamera.md för att få en fungerande kamera som följer spelaren 
