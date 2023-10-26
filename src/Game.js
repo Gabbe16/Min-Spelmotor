@@ -4,6 +4,7 @@ import Player from "./Player.js"
 import UserInterface from "./UserInterface.js"
 import Camera from "./Camera.js"
 import Pumpkin from "./Pumpkin.js"
+import Background from "./Background.js"
 
 export default class Game {
   constructor(width, height) {
@@ -11,6 +12,7 @@ export default class Game {
     this.height = height
     this.ui = new UserInterface(this)
     this.input = new InputHandler(this)
+    this.background = new Background(this)
     this.keys = []
     this.gameOver = false
     this.score = 0
@@ -41,6 +43,8 @@ export default class Game {
     if (!this.gameOver) {
       this.gameTime += deltaTime
     }
+    this.background.update()
+    
     this.player.update(deltaTime)
 
     this.platforms.forEach((platform) => {
@@ -70,6 +74,7 @@ export default class Game {
   }
 
   draw(context) {
+    this.background.draw(context)
     this.ui.draw(context)
     this.camera.apply(context)
     this.player.draw(context, this.camera.x, this.camera.y)
