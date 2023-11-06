@@ -6,9 +6,18 @@ export default class{
         this.game = game
         const background = new Image()
         background.src = skyImage
-        this.skyLayer = new Layer(this.game, background, 1708, 500, 0,2)
+        this.skyLayer = new Layer(this.game, background, 1760, 512, 0.2)
         this.layers = [
             this.skyLayer
         ]
+        console.log(this.layers)
+    }
+
+    update() {
+        this.layers.forEach((layer) => layer.update())
+    }
+
+    draw(context) {
+        this.layers.forEach((layer) => layer.draw(context))
     }
 }

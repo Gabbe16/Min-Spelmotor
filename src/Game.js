@@ -37,6 +37,7 @@ export default class Game {
     this.platforms = [
       new Platform(this, 0, this.ground, this.width + 600, 200),
     ]
+    this.speed = 1
   }
 
   update(deltaTime) {
