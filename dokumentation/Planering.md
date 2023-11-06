@@ -1,9 +1,9 @@
-## Planering
+# Planering
 
-# Målgrupp och syfte
+## Målgrupp och syfte
 Spelet är en 2d side-scroller där du är en unge som hoppar och tar sönder andras pumpor eftersom man blev nekad till godis på halloween och fick mjuka mandariner istället. Man får fler poäng desto mer pumpor man tar sönder men man ska akta sig för grannen som är i fönsterna innan man hoppar på pumpan för då är det "game over" eftersom man blir tagen. Temat är halloween och målgruppen för spelet kommer att vara dem som är intresserad av side-scrollers och har stort intresse för halloween och spel allmänt.
 
-# Innehåll
+## Innehåll
 Spelet i sig ska innehålla följande:
 
 * Grafik
@@ -17,7 +17,7 @@ Allt detta ska uppnås med hjälp av klasser och funktioner.Pumporna är en typ 
 
 Jag möter målgruppen genom att göra spelet så bra som möjligt så att det passar in i halloween temat samtidigt som när jag får grafiken kan jag ändra placeholders så att grafiken även passar in tydligt och signalerar halloween till den som spelar.
 
-# Design/Struktur
+## Design/Struktur
 Delarna som jag behöver är enemy klassen och sedan extends för att göra grannarna och pumporna. För ljud kommer jag använda dokumentationen i Game-base och till sist för att fixa grafiken kommer jag också använda mig av Sprite-Animation steget i Game-base. Detta kommer alltså att göras i olika klasser och sedan användas i game för att få allt att fungera tillsammans. 
 
 ## Ordningsplanering
