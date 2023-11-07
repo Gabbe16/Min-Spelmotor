@@ -25,7 +25,8 @@ export default class Game {
     this.enemies = [
       new Pumpkin(this, 350, 370),
       new Pumpkin(this, 700, 370),
-      new Pumpkin(this, 1050, 370)
+      new Pumpkin(this, 1050, 370),
+      new Neighbour(this, 400, 370)
     ]
 
     this.enemyTimer = 0
@@ -54,7 +55,7 @@ export default class Game {
         if (this.player.speedY > 0) {
           enemy.markedForDeletion = true
           this.player.speedY = -this.player.jumpSpeed
-          this.score += 25
+          this.score += 50
         }
       }
     })
@@ -74,7 +75,6 @@ export default class Game {
     })
 
     if (this.enemyTimer > this.enemyIntervall && !this.gameOver) {
-      this.enemyTimer = 0
     } else {
       this.enemyTimer += deltaTime
     }
