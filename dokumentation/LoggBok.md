@@ -38,4 +38,8 @@ Problemet jag hade förut var att jag inte hade någon platform som agerade som 
 
 Idag har jag fixat varierande saker som ui, enemies och en kamera som följer spelaren.
 
-I ui har jag fixat så att score ligger under tiden istället för att texten är bredvid varandra. På enemies har jag fixat så att dem inte buggar fast i marken och till sist har jag följt dokumentationen för mario-kamera.md för att få en fungerande kamera som följer spelaren 
+I ui har jag fixat så att score ligger under tiden istället för att texten är bredvid varandra. På enemies har jag fixat så att dem inte buggar fast i marken och till sist har jag följt dokumentationen för mario-kamera.md för att få en fungerande kamera som följer spelaren
+
+## Vecka 45 tisdag (2023-11-07)
+
+Idag har jag fixat klart pumporna så att det går att hoppa på dem och öka poängen med hjälp av en collisionCheck mellan spelaren och pumpan. Därefter gjorde jag en neighbour klass som är en till typ av enemy som har x och y koordinater. Nästa gång kommer jag fixa att neighbours kan spawnas in och ifall man hoppar på en pumpa när dem kollar så aktiveras gameover, jag kan även fixat att efter x antal score så vinner man också för då har jag win condition och hur man förlorar.

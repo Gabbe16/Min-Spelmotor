@@ -26,7 +26,7 @@ export default class Game {
       new Pumpkin(this, 350, 370),
       new Pumpkin(this, 700, 370),
       new Pumpkin(this, 1050, 370),
-      new Neighbour(this, 400, 370)
+      new Neighbour(this, 415, 370)
     ]
 
     this.enemyTimer = 0
