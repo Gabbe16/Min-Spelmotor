@@ -5,6 +5,7 @@ import UserInterface from "./UserInterface.js"
 import Camera from "./Camera.js"
 import Pumpkin from "./Pumpkin.js"
 import Background from "./Background.js"
+import Neighbour from "./Neighbour.js"
 
 export default class Game {
   constructor(width, height) {
@@ -19,6 +20,7 @@ export default class Game {
     this.gravity = 1
     this.debug = false
     this.gameTime = 0
+    this.speed = 1
 
     this.enemies = [
       new Pumpkin(this, 350, 370),
@@ -37,7 +39,6 @@ export default class Game {
     this.platforms = [
       new Platform(this, 0, this.ground, this.width + 600, 200),
     ]
-    this.speed = 1
   }
 
   update(deltaTime) {
@@ -47,6 +48,16 @@ export default class Game {
     this.background.update()
     
     this.player.update(deltaTime)
+
+    this.enemies.forEach((enemy) => {
+      if (this.checkPumpkinCollision(this.player, enemy)) {
+        if (this.player.speedY > 0) {
+          enemy.markedForDeletion = true
+          this.player.speedY = -this.player.jumpSpeed
+          this.score += 25
+        }
+      }
+    })
 
     this.platforms.forEach((platform) => {
       if (this.checkPlatformCollision(this.player, platform)) {
@@ -82,6 +93,15 @@ export default class Game {
     this.platforms.forEach((platform) => platform.draw(context))
     this.enemies.forEach((enemy) => enemy.draw(context, this.camera.x, this.camera.y))
     this.camera.reset(context)
+  }
+
+  checkPumpkinCollision(object1, object2) {
+    return (
+      object1.x < object2.x + object2.width &&
+      object1.x + object1.width > object2.x &&
+      object1.y < object2.y + object2.height &&
+      object1.height + object1.y > object2.y
+    )
   }
 
   checkPlatformCollision(object, platform) {
