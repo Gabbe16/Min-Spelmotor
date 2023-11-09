@@ -26,11 +26,11 @@ export default class Game {
       new Pumpkin(this, 350, 370),
       new Pumpkin(this, 700, 370),
       new Pumpkin(this, 1050, 370),
-      new Neighbour(this, 415, 370)
     ]
 
     this.enemyTimer = 0
-    this.enemyIntervall = 1000
+    // spawnTimer
+    this.enemyIntervall = 5000
 
     this.player = new Player(this)
     this.camera = new Camera(this, this.player.x, this.player.y, 0, 100)
@@ -68,13 +68,15 @@ export default class Game {
       }
       this.enemies.forEach((enemy) => {
         if (this.checkPlatformCollision(enemy, platform)) {
-          enemy.speedY = 0
           enemy.y = platform.y - enemy.height
         }
       })
     })
 
+    // spawntimer för neighbours
     if (this.enemyTimer > this.enemyIntervall && !this.gameOver) {
+      this.enemies.push(new Neighbour(this, 415, 370))
+      this.enemyTimer = 0
     } else {
       this.enemyTimer += deltaTime
     }
@@ -95,12 +97,12 @@ export default class Game {
     this.camera.reset(context)
   }
 
-  checkPumpkinCollision(object1, object2) {
+  checkPumpkinCollision(object, Pumpkin) {
     return (
-      object1.x < object2.x + object2.width &&
-      object1.x + object1.width > object2.x &&
-      object1.y < object2.y + object2.height &&
-      object1.height + object1.y > object2.y
+      object.x < Pumpkin.x + Pumpkin.width &&
+      object.x + object.width > Pumpkin.x &&
+      object.y < Pumpkin.y + Pumpkin.height &&
+      object.height + object.y > Pumpkin.y
     )
   }
 
