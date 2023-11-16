@@ -16,6 +16,7 @@ export default class Game {
     this.background = new Background(this)
     this.keys = []
     this.gameOver = false
+    this.activeNeighbours = false
     this.score = 0
     this.gravity = 1
     this.debug = false
@@ -47,15 +48,20 @@ export default class Game {
       this.gameTime += deltaTime
     }
     this.background.update()
-    
+
     this.player.update(deltaTime)
 
     this.enemies.forEach((enemy) => {
       if (this.checkPumpkinCollision(this.player, enemy)) {
-        if (this.player.speedY > 0) {
+        if (this.player.speedY > 0 && this.activeNeighbours === false) {
           enemy.markedForDeletion = true
           this.player.speedY = -this.player.jumpSpeed
           this.score += 50
+        } else if (this.player.speedY > 0 && this.activeNeighbours === true) {
+          enemy.markedForDeletion = true
+          this.player.speedY = -this.player.jumpSpeed
+          this.score += 50
+          this.gameOver = true
         }
       }
     })
@@ -76,6 +82,10 @@ export default class Game {
     // spawntimer för neighbours
     if (this.enemyTimer > this.enemyIntervall && !this.gameOver) {
       this.enemies.push(new Neighbour(this, 415, 370))
+      this.enemies.push(new Neighbour(this, 765, 370))
+      this.enemies.push(new Neighbour(this, 1115, 370))
+      this.activeNeighbours = true
+      console.log(this.activeNeighbours)
       this.enemyTimer = 0
     } else {
       this.enemyTimer += deltaTime
