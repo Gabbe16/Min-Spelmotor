@@ -4,7 +4,7 @@ export default class Neighbour extends Enemy{
     constructor(game, x, y){
         super(game)
         this.game = game
-        console.log('spawnade ny neighbour')
+        console.log('Spawned new Neighbour')
         this.width = 32
         this.height = 64
         this.x = x
