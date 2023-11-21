@@ -21,6 +21,7 @@ export default class{
             this.middleLayer,
             this.foregroundLayer
         ]
+        
         console.log(this.layers)
     }
 

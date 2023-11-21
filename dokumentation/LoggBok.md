@@ -47,3 +47,7 @@ Idag har jag fixat klart pumporna så att det går att hoppa på dem och öka po
 ## Vecka 46 Torsdag (2023-11-16)
 
 Idag har jag gjort klart neighbour klassen så att deras game over mekanik fungerar korrekt med att när dem är uppe och man hoppar på pumpan så är det game over och när dem är borta får man score och kan fortsätta. Detta gjordes med en typ av flagga som jag kallade för activeNeighbours som sattes till false automatiskt och när neighbours spawnades in blev den true. Därefter var det bara att koppla denna flagga till hoppmekaniken som kollar score.
+
+## Vecka 47 Tisdag (2023-11-21)
+
+Idag har jag fört in både foreground och middleground samtidigt som jag har tittat på hur man gör sprite animationer. Jag gjorde detta genom att göra på samma sätt jag förde in sky_image alltså himlen med att lägga till två fler lager i Layers[]. Jag hade lite problem med bild sökvägarna men jag fixade det tillslut eftersom jag hade skrivfel här och där i min kod. Därefter förde jag in sprite bilderna och nu ska jag bara börja göra klart sprites.
