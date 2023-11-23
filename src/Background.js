@@ -1,4 +1,4 @@
-import Layer from "./Layer";
+import Layer from "./Layer"
 import skyImage from './assets/layers/sky_layer.png'
 import middleImage from './assets/layers/middle_layer.png'
 import foregroundImage from './assets/layers/foreground_layer.png'
