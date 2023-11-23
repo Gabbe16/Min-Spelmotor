@@ -51,3 +51,7 @@ Idag har jag gjort klart neighbour klassen så att deras game over mekanik funge
 ## Vecka 47 Tisdag (2023-11-21)
 
 Idag har jag fört in både foreground och middleground samtidigt som jag har tittat på hur man gör sprite animationer. Jag gjorde detta genom att göra på samma sätt jag förde in sky_image alltså himlen med att lägga till två fler lager i Layers[]. Jag hade lite problem med bild sökvägarna men jag fixade det tillslut eftersom jag hade skrivfel här och där i min kod. Därefter förde jag in sprite bilderna och nu ska jag bara börja göra klart sprites.
+
+## Vecka 47 Torsdag (2023-11-23)
+
+Idag har jag fört in playerSprite och försökt fixa min spel med alla problem som detta medförde. Jag kunde inte fixa alla problem idag men jag är nästan klar med det. Jag kommer nog mest troligt behöva hjälp med det sista för att spelet ska fungera. Det sista är bara att föra in sprites för pumporna och neighbours.
