@@ -54,4 +54,4 @@ Idag har jag fört in både foreground och middleground samtidigt som jag har ti
 
 ## Vecka 47 Torsdag (2023-11-23)
 
-Idag har jag fört in playerSprite och försökt fixa min spel med alla problem som detta medförde. Jag kunde inte fixa alla problem idag men jag är nästan klar med det. Jag kommer nog mest troligt behöva hjälp med det sista för att spelet ska fungera. Det sista är bara att föra in sprites för pumporna och neighbours.
+Idag har jag fört in playerSprite och försökt fixa mitt spel med alla problem som detta medförde. Jag kunde inte fixa alla problem idag men jag är nästan klar med det att fixa det. Jag kommer nog mest troligt behöva hjälp med det sista för att spelet ska fungera korrekt. Det sista efter det är bara att föra in sprites för pumporna och neighbours.
