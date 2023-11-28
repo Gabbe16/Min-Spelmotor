@@ -39,7 +39,7 @@ export default class Game {
     this.ground = this.height - 100
 
     this.platforms = [
-      new Platform(this, 0, this.ground, this.width + 600, 200),
+      new Platform(this, 0, this.ground, this.width + 600, 100),
     ]
   }
 

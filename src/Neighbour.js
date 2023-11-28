@@ -1,4 +1,5 @@
 import Enemy from "./Enemy";
+import enemyImage from "./assets/sprites/enemySprite.png"
 
 export default class Neighbour extends Enemy{
     constructor(game, x, y){
@@ -14,6 +15,11 @@ export default class Neighbour extends Enemy{
         // delete timer
         this.duration = 3000
         this.markedForDeletion = false
+
+        // Enemy Sprite image
+        const image = new Image()
+        image.src = enemyImage
+        this.image = image
     }
 
     update(deltaTime) {
