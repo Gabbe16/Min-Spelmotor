@@ -55,3 +55,7 @@ Idag har jag fört in både foreground och middleground samtidigt som jag har ti
 ## Vecka 47 Torsdag (2023-11-23)
 
 Idag har jag fört in playerSprite och försökt fixa mitt spel med alla problem som detta medförde. Jag kunde inte fixa alla problem idag men jag är nästan klar med det att fixa det. Jag kommer nog mest troligt behöva hjälp med det sista för att spelet ska fungera korrekt. Det sista efter det är bara att föra in sprites för pumporna och neighbours.
+
+## Vecka 48 Tisdag (2023-11-28)
+
+Idag har jag fört in resten av mina sprites men det återstår ett par problem fortfarande. Det första problemet är att min sprite animation på min player inte fungerar och förstör marken. Det andra är att jag inte vet vart jag ska föra använda mina andra sprites på neighbour och pumpkin eftersom dem inte har någon egen rit funktion, just nu ligger dem i deras extends alltså neighbour och pumpkin. Problemet i sig ligger i om jag ska göra en draw funktion för dem eller använda den gemensamma från klassen enemies. Jag vet inte riktigt hur jag ska fixa detta men jag har försökt åtminstone. Till sist måste middleground bilden flyttas upp jämfört med background och foreground, när dessa problem är klar så är också mitt spel klart.
