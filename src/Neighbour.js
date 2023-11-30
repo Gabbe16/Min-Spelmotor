@@ -6,8 +6,8 @@ export default class Neighbour extends Enemy{
         super(game)
         this.game = game
         console.log('Spawned new Neighbour')
-        this.width = 32
-        this.height = 64
+        this.width = 128
+        this.height = 128
         this.x = x
         this.y = y
         this.type = "neighbour"
@@ -20,6 +20,17 @@ export default class Neighbour extends Enemy{
         const image = new Image()
         image.src = enemyImage
         this.image = image
+
+         // Sprite animation
+         this.frameX = 0
+         this.frameY = 1
+         this.maxFrame = 1
+         this.fps = 20
+         this.timer = 0
+         this.interval = 1000 / this.fps
+ 
+         // flip sprite
+         this.flip = false
     }
 
     update(deltaTime) {
@@ -30,5 +41,31 @@ export default class Neighbour extends Enemy{
         } else {
             this.timer += deltaTime
         }
+    }
+
+    draw(context) {
+    
+        if (this.flip) {
+            context.save()
+            context.scale(-1, 1)
+        }
+
+
+        context.drawImage(
+            this.image,
+            this.frameX * this.width,
+            this.frameY * this.height,
+            this.width,
+            this.height,
+            this.x,
+            this.y,
+            this.width,
+            this.height
+            )
+            
+            if (this.flip) {
+                context.restore()
+            }
+        
     }
 }

@@ -1,5 +1,5 @@
 export default class Layer{
-    constructor(game, image, width, height, speedModifier){
+    constructor(game, image, width, height, speedModifier, offset = 0){
         this.game = game
         this.image = image
         this.width = width
@@ -7,6 +7,7 @@ export default class Layer{
         this.speedModifier = speedModifier
         this.x = 0
         this.y = 0
+        this.offset = offset
     }
 
     update(){
@@ -34,7 +35,7 @@ export default class Layer{
             this.y + 20
           )
         }
-        context.drawImage(this.image, this.x, this.y)
-        context.drawImage(this.image, this.x + this.width, this.y)
+        context.drawImage(this.image, this.x, this.y + this.offset)
+        context.drawImage(this.image, this.x + this.width, this.y + this.offset)
       }
 }

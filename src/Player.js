@@ -3,8 +3,8 @@ import playerImage from './assets/sprites/playerSprite.png'
 export default class Player {
     constructor(game) {
         this.game = game
-        this.width = 32
-        this.height = 32
+        this.width = 128
+        this.height = 128
         this.x = 50
         this.y = 350
 
@@ -54,7 +54,7 @@ export default class Player {
         this.y += this.speedY
         this.x += this.speedX
 
-        /*
+        
 
         if (this.speedX < 0) {
             this.flip = true
@@ -73,34 +73,33 @@ export default class Player {
             this.frameX = 0
         }
 
-        */
+        
     }
 
     draw(context) {
-        context.fillStyle = '#f00'
-        context.fillRect(this.x, this.y, this.width, this.height)
 
         if (this.flip) {
             context.save()
             context.scale(-1, 1)
         }
 
-        /*
 
         context.drawImage(
             this.image,
             this.frameX * this.width,
-            this.frameY * this.height - 14,
+            this.frameY * this.height,
             this.width,
             this.height,
             this.flip ? this.x * -1 - this.width : this.x,
             this.y,
             this.width,
             this.height
-        )
+            )
+            
+            if (this.flip) {
+                context.restore()
+            }
 
-        context.restore()
-
-        */
+        
     }
 }

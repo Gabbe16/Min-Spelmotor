@@ -8,10 +8,10 @@ export default class{
         this.game = game
         const background = new Image()
         background.src = skyImage
-        this.skyLayer = new Layer(this.game, background, 1760, 512, 0.2)
+        this.skyLayer = new Layer(this.game, background, 1760, 512, 0.2, -45)
         const middle = new Image()
         middle.src = middleImage
-        this.middleLayer = new Layer(this.game, middle, 1760, 512, 0.4 )
+        this.middleLayer = new Layer(this.game, middle, 1760, 512, 0.4, -165 )
         const foreground = new Image()
         foreground.src = foregroundImage
         this.foregroundLayer = new Layer(this.game, foreground, 1760, 512, 0.8)
@@ -22,7 +22,6 @@ export default class{
             this.foregroundLayer
         ]
         
-        console.log(this.layers)
     }
 
     update() {
