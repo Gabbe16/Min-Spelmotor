@@ -59,3 +59,7 @@ Idag har jag fört in playerSprite och försökt fixa mitt spel med alla problem
 ## Vecka 48 Tisdag (2023-11-28)
 
 Idag har jag fört in resten av mina sprites men det återstår ett par problem fortfarande. Det första problemet är att min sprite animation på min player inte fungerar och förstör marken. Det andra är att jag inte vet vart jag ska föra använda mina andra sprites på neighbour och pumpkin eftersom dem inte har någon egen rit funktion, just nu ligger dem i deras extends alltså neighbour och pumpkin. Problemet i sig ligger i om jag ska göra en draw funktion för dem eller använda den gemensamma från klassen enemies. Jag vet inte riktigt hur jag ska fixa detta men jag har försökt åtminstone. Till sist måste middleground bilden flyttas upp jämfört med background och foreground, när dessa problem är klar så är också mitt spel klart.
+
+## Vecka 48 Torsdag (2023-11-28)
+
+Idag har jag fixat det mesta av mina problem, player sprite och pumporna har nu sprites och syns för den som spelar. Jag har även fixat middleground layer med hjälp av att lägga till en offset variabel som flyttar upp eller ned bilden så att den är mitt i mellan background och foreground iställte för på marken. Det sista som behöver fixas för ett färdigt spel är att lägga till Neighbour sprite och sedan ha lite bakgrunds musik ifall jag hinner med det.
