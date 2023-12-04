@@ -63,3 +63,7 @@ Idag har jag fört in resten av mina sprites men det återstår ett par problem 
 ## Vecka 48 Torsdag (2023-11-28)
 
 Idag har jag fixat det mesta av mina problem, player sprite och pumporna har nu sprites och syns för den som spelar. Jag har även fixat middleground layer med hjälp av att lägga till en offset variabel som flyttar upp eller ned bilden så att den är mitt i mellan background och foreground iställte för på marken. Det sista som behöver fixas för ett färdigt spel är att lägga till Neighbour sprite och sedan ha lite bakgrunds musik ifall jag hinner med det.
+
+## Vecka 49 Måndag (2023-12-04)
+
+Idag har jag fixat Neighbour sprite och sedan gjort platformen osynlig för att ge en bättre syn på bakgrunden. Kameran följer bara med i x-led nu och inte y-led eftersom det förstörde bakgrunden.
