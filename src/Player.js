@@ -14,7 +14,7 @@ export default class Player {
         this.jumpSpeed = 14
         this.grounded = false
 
-        // Sprite image
+        // Player Sprite image
         const image = new Image()
         image.src = playerImage
         this.image = image

@@ -20,12 +20,12 @@ export default class Camera {
         let targetY = player.y - halfHeight
 
         this.x += (targetX - this.x) * this.lerpFactor
-        this.y += (targetY - this.y) * this.lerpFactor
+        // this.y += (targetY - this.y) * this.lerpFactor
     }
 
     apply(context) {
         context.save()
-        context.translate(-this.x, -this.y)
+        context.translate(-this.x, 0)
     }
 
     reset(context) {

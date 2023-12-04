@@ -15,9 +15,6 @@ export default class Pumpkin extends Enemy {
         image.src = pumpkinImage
         this.image = image
 
-        // Sprite animation
-        this.frameX = 0
-        this.frameY = 1
         this.maxFrame = 1
         this.fps = 20
         this.timer = 0

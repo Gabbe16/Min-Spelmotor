@@ -10,7 +10,7 @@ export default class Platform {
     update() { }
 
     draw(context) {
-        context.fillStyle = '#795548'
+        // context.fillStyle = '#795548'
         context.fillRect(this.x, this.y, this.width, this.height)
 
         if (this.game.debug) {

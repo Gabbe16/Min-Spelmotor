@@ -24,9 +24,9 @@ export default class Game {
     this.speed = 1
 
     this.enemies = [
-      new Pumpkin(this, 350, 370),
-      new Pumpkin(this, 700, 370),
-      new Pumpkin(this, 1050, 370),
+      new Pumpkin(this, 340, 370),
+      new Pumpkin(this, 690, 370),
+      new Pumpkin(this, 1040, 370),
     ]
 
     this.enemyTimer = 0
@@ -39,7 +39,7 @@ export default class Game {
     this.ground = this.height - 100
 
     this.platforms = [
-      new Platform(this, 0, this.ground, this.width + 600, 100),
+      new Platform(this, 0, this.ground, this.width + 600, 200),
     ]
   }
 
@@ -81,9 +81,9 @@ export default class Game {
 
     // spawntimer för neighbours
     if (this.enemyTimer > this.enemyIntervall && !this.gameOver) {
-      this.enemies.push(new Neighbour(this, 415, 370))
-      this.enemies.push(new Neighbour(this, 765, 370))
-      this.enemies.push(new Neighbour(this, 1115, 370))
+      this.enemies.push(new Neighbour(this, 480, 370))
+      this.enemies.push(new Neighbour(this, 830, 370))
+      this.enemies.push(new Neighbour(this, 1180, 370))
       this.activeNeighbours = true
       console.log(this.activeNeighbours)
       this.enemyTimer = 0
