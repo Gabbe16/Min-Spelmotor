@@ -6,6 +6,7 @@ import Camera from "./Camera.js"
 import Pumpkin from "./Pumpkin.js"
 import Background from "./Background.js"
 import Neighbour from "./Neighbour.js"
+import Sound from "./sound.js"
 
 export default class Game {
   constructor(width, height) {
@@ -14,6 +15,7 @@ export default class Game {
     this.ui = new UserInterface(this)
     this.input = new InputHandler(this)
     this.background = new Background(this)
+    this.sound = new Sound(this)
     this.keys = []
     this.gameOver = false
     this.activeNeighbours = false
@@ -41,6 +43,8 @@ export default class Game {
     this.platforms = [
       new Platform(this, 0, this.ground, this.width + 600, 200),
     ]
+
+    this.sound.playBackgroundMusic()
   }
 
   update(deltaTime) {
